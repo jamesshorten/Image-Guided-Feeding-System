@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1080" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4510"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="494" id="495"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <menu title="AMainMenu" systemMenu="main" id="29">
+            <items>
+                <menuItem title="Image Guided Feeding Sytem" id="56">
+                    <menu key="submenu" title="Image Guided Feeding Sytem" systemMenu="apple" id="57">
+                        <items>
+                            <menuItem title="About Image Guided Feeding Sytem" id="58">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="236">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Hide Image Guided Feeding Sytem" keyEquivalent="h" id="134">
+                                <connections>
+                                    <action selector="hide:" target="-1" id="367"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="145">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-1" id="368"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="150">
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-1" id="370"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="149">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Quit Image Guided Feeding Sytem" keyEquivalent="q" id="136">
+                                <connections>
+                                    <action selector="terminate:" target="-3" id="449"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+        </menu>
+        <window title="Image Guided Feeding Sytem" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="335" y="390" width="818" height="568"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
+            <view key="contentView" id="372">
+                <rect key="frame" x="0.0" y="0.0" width="818" height="568"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Cxe-mg-iig">
+                        <rect key="frame" x="14" y="33" width="391" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Feed" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lMZ-5I-ctK">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <accessibility description="Feed"/>
+                        <connections>
+                            <action selector="buttonPressedWithButton:" target="494" id="JYw-GD-8mY"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mrx-51-fEP">
+                        <rect key="frame" x="413" y="33" width="391" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Abort" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ub7-Sn-Hl9">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <accessibility description="Abort"/>
+                        <connections>
+                            <action selector="buttonPressedWithButton:" target="494" id="l4O-yU-bMB"/>
+                        </connections>
+                    </button>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ci6-Av-xTn">
+                        <rect key="frame" x="-3" y="78" width="413" height="493"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="JX1-fx-MF0"/>
+                    </imageView>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hGb-WV-bJF">
+                        <rect key="frame" x="409" y="78" width="412" height="493"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="a33-3U-elc"/>
+                    </imageView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zno-Zu-Ysh">
+                        <rect key="frame" x="17" y="9" width="784" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="hHj-NS-VEg">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="zno-Zu-Ysh" secondAttribute="trailing" constant="20" id="4Sg-yU-4Yx"/>
+                    <constraint firstAttribute="trailing" secondItem="mrx-51-fEP" secondAttribute="trailing" constant="20" id="5wA-DL-08x"/>
+                    <constraint firstAttribute="bottom" secondItem="zno-Zu-Ysh" secondAttribute="bottom" constant="9" id="Dj1-2D-PJr"/>
+                    <constraint firstItem="Cxe-mg-iig" firstAttribute="top" secondItem="Ci6-Av-xTn" secondAttribute="bottom" constant="20" id="DtM-bW-6HA"/>
+                    <constraint firstItem="Cxe-mg-iig" firstAttribute="height" secondItem="mrx-51-fEP" secondAttribute="height" id="N4z-Pd-RvJ"/>
+                    <constraint firstAttribute="trailing" secondItem="hGb-WV-bJF" secondAttribute="trailing" id="U1S-n7-2bO"/>
+                    <constraint firstItem="hGb-WV-bJF" firstAttribute="top" secondItem="372" secondAttribute="top" id="ZcF-Yt-vUZ"/>
+                    <constraint firstItem="hGb-WV-bJF" firstAttribute="leading" secondItem="Ci6-Av-xTn" secondAttribute="trailing" constant="5" id="b7f-3N-5fi"/>
+                    <constraint firstItem="hGb-WV-bJF" firstAttribute="width" secondItem="Ci6-Av-xTn" secondAttribute="width" id="cGE-H9-1KR"/>
+                    <constraint firstItem="mrx-51-fEP" firstAttribute="leading" secondItem="Cxe-mg-iig" secondAttribute="trailing" constant="20" id="esT-3w-pZH"/>
+                    <constraint firstItem="Ci6-Av-xTn" firstAttribute="top" secondItem="372" secondAttribute="top" id="esy-A9-jvP"/>
+                    <constraint firstItem="Cxe-mg-iig" firstAttribute="leading" secondItem="372" secondAttribute="leading" constant="20" id="fm7-FG-lL2"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="mrx-51-fEP" secondAttribute="bottom" constant="40" id="hNV-Fr-oux"/>
+                    <constraint firstItem="Ci6-Av-xTn" firstAttribute="leading" secondItem="372" secondAttribute="leading" id="j8s-Fa-Cq8"/>
+                    <constraint firstItem="zno-Zu-Ysh" firstAttribute="top" secondItem="Cxe-mg-iig" secondAttribute="bottom" constant="14" id="jEo-73-5cv"/>
+                    <constraint firstItem="zno-Zu-Ysh" firstAttribute="leading" secondItem="372" secondAttribute="leading" constant="20" id="kds-qW-y1f"/>
+                    <constraint firstItem="mrx-51-fEP" firstAttribute="top" secondItem="hGb-WV-bJF" secondAttribute="bottom" constant="20" id="lg5-2p-j6z"/>
+                    <constraint firstItem="Cxe-mg-iig" firstAttribute="width" secondItem="mrx-51-fEP" secondAttribute="width" id="rVa-vL-2KI"/>
+                    <constraint firstItem="mrx-51-fEP" firstAttribute="top" secondItem="hGb-WV-bJF" secondAttribute="bottom" constant="20" id="t2h-qU-5lT"/>
+                    <constraint firstAttribute="bottom" secondItem="mrx-51-fEP" secondAttribute="bottom" constant="40" id="yds-sj-Q6I"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mrx-51-fEP" secondAttribute="trailing" constant="20" id="z0B-i4-SA6"/>
+                </constraints>
+            </view>
+        </window>
+        <customObject id="494" customClass="AppDelegate">
+            <connections>
+                <outlet property="CoordinatesField" destination="zno-Zu-Ysh" id="Obv-Re-W6g"/>
+                <outlet property="leftImageView" destination="Ci6-Av-xTn" id="lQ2-Fn-KPF"/>
+                <outlet property="rightImageView" destination="hGb-WV-bJF" id="w4M-IJ-ZJE"/>
+                <outlet property="window" destination="371" id="532"/>
+            </connections>
+        </customObject>
+        <customObject id="420" customClass="NSFontManager"/>
+    </objects>
+</document>
